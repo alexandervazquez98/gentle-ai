@@ -43,6 +43,7 @@ var knownAgents = map[string]bool{
 	string(model.AgentOpenClaw): true, string(model.AgentPi): true, string(model.AgentTrae): true,
 	string(model.AgentHermes): true, string(model.AgentConductor): true,
 	string(model.AgentGitHubCopilotCLI): true,
+	string(model.AgentMiniMaxCode): true,
 }
 
 var knownComponents = map[string]bool{

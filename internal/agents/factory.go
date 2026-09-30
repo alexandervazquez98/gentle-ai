@@ -14,6 +14,7 @@ import (
 	"github.com/gentleman-programming/gentle-ai/v4/internal/agents/kilocode"
 	"github.com/gentleman-programming/gentle-ai/v4/internal/agents/kimi"
 	"github.com/gentleman-programming/gentle-ai/v4/internal/agents/kiro"
+	minimaxcodeadapter "github.com/gentleman-programming/gentle-ai/v4/internal/agents/minimaxcode"
 	"github.com/gentleman-programming/gentle-ai/v4/internal/agents/openclaw"
 	"github.com/gentleman-programming/gentle-ai/v4/internal/agents/opencode"
 	"github.com/gentleman-programming/gentle-ai/v4/internal/agents/pi"
@@ -43,6 +44,7 @@ var defaultAgentIDs = []model.AgentID{
 	model.AgentHermes,
 	model.AgentConductor,
 	model.AgentGitHubCopilotCLI,
+	model.AgentMiniMaxCode,
 }
 
 func NewAdapter(agent model.AgentID) (Adapter, error) {
@@ -83,6 +85,8 @@ func NewAdapter(agent model.AgentID) (Adapter, error) {
 		return conductor.NewAdapter(), nil
 	case model.AgentGitHubCopilotCLI:
 		return copilotcli.NewAdapter(), nil
+	case model.AgentMiniMaxCode:
+		return minimaxcodeadapter.NewAdapter(), nil
 	default:
 		return nil, AgentNotSupportedError{Agent: agent}
 	}

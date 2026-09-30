@@ -81,6 +81,7 @@ func TestDefaultRegistrySupportedAgentsMatchesFactoryAgents(t *testing.T) {
 		model.AgentKilocode,
 		model.AgentKimi,
 		model.AgentKiroIDE,
+		model.AgentMiniMaxCode,
 		model.AgentOpenClaw,
 		model.AgentOpenCode,
 		model.AgentPi,
