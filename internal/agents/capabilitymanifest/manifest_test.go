@@ -329,8 +329,8 @@ func TestEveryManifestDigestStaysByteStable(t *testing.T) {
 		nonPiAgents = append(nonPiAgents, agent)
 	}
 
-	if got := len(nonPiAgents); got != 17 {
-		t.Fatalf("want 17 non-Pi agents, got %d", got)
+	if got := len(nonPiAgents); got != 18 {
+		t.Fatalf("want 18 non-Pi agents, got %d", got)
 	}
 
 	for _, agent := range nonPiAgents {
